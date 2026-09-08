@@ -19,6 +19,8 @@ a normal Windows VM.
   `ntdll!NtCreateFile`
 - [05-system-mechanisms](05-system-mechanisms/) - exceptions, descriptor tables,
   kernel structures, waits, APCs, and synchronization
+- [system mechanisms lab](05-system-mechanisms/system-lab/) - collect WinDbg
+  evidence for a syscall, thread structures, a wait, and IRQL
 
 The usual path for a native system call looks roughly like this:
 
@@ -50,6 +52,7 @@ cl /nologo /W4 04-win32k-filtering\query_policy.c
 cl /nologo /W4 syscall-lab\win32_create.c
 cl /nologo /W4 syscall-lab\native_create.c
 cl /nologo /W4 /EHsc syscall-lab\inspect_ntcreatefile.cpp
+cl /nologo /W4 /Z7 /Od 05-system-mechanisms\system-lab\system_lab.c /link /DEBUG
 ```
 
 I use a VM for the debugger exercises, especially when kernel debugging is

@@ -12,6 +12,8 @@ entry paths, kernel objects, waits, APCs, and the structures listed below.
   used in this section
 - [synchronization](synchronization/) - dispatcher objects, waits, APCs, IRQL,
   critical sections, spin locks, and interlocked operations
+- [system-lab](system-lab/) - inspect a syscall, `_ETHREAD`/`_KTHREAD`, a
+  waiting worker, and IRQL with WinDbg
 
 The examples are normal user-mode programs. Kernel details are kept as WinDbg
 notes because copying private structure offsets into a driver would make the
@@ -28,6 +30,7 @@ cl /nologo /W4 kernel-structures\object_handles.c
 cl /nologo /W4 synchronization\wait_objects.c
 cl /nologo /W4 synchronization\apc_demo.c
 cl /nologo /W4 synchronization\interlocked_counter.c
+cl /nologo /W4 /Z7 /Od system-lab\system_lab.c /link /DEBUG
 ```
 
 Use a kernel debugging VM for the `!idt`, `!process`, `!thread`, and `dt`

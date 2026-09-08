@@ -1,0 +1,5 @@
+*.exe
+*.ilk
+*.obj
+*.pdb
+system-lab-output.txt

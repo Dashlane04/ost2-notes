@@ -428,3 +428,4 @@ user-mode side of these relationships:
 - [system call tables](system-call-tables/README.md)
 - [kernel structures](kernel-structures/README.md)
 - [synchronization](synchronization/README.md)
+- [system mechanisms lab](system-lab/README.md)
