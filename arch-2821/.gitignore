@@ -2,3 +2,5 @@
 *.obj
 *.pdb
 *.ilk
+win32-created.txt
+native-created.txt

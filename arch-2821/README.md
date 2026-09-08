@@ -15,6 +15,10 @@ a normal Windows VM.
 - [03-syscalls](03-syscalls/) - notes about the x64 syscall path and a program
   that dumps a syscall stub
 - [04-win32k-filtering](04-win32k-filtering/) - the Win32k mitigation policy
+- [syscall-lab](syscall-lab/) - trace `CreateFileA` down to
+  `ntdll!NtCreateFile`
+- [05-system-mechanisms](05-system-mechanisms/) - exceptions, descriptor tables,
+  kernel structures, waits, APCs, and synchronization
 
 The usual path for a native system call looks roughly like this:
 
@@ -43,6 +47,9 @@ cl /nologo /W4 02-native-api\unicode_string.c
 cl /nologo /W4 02-native-api\rtl_heap.c
 cl /nologo /W4 /EHsc 03-syscalls\inspect_stub.cpp
 cl /nologo /W4 04-win32k-filtering\query_policy.c
+cl /nologo /W4 syscall-lab\win32_create.c
+cl /nologo /W4 syscall-lab\native_create.c
+cl /nologo /W4 /EHsc syscall-lab\inspect_ntcreatefile.cpp
 ```
 
 I use a VM for the debugger exercises, especially when kernel debugging is
