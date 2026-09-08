@@ -2,6 +2,9 @@
 
 Notes for the system mechanisms part of the course.
 
+Start with [overview.md](overview.md). It is the map I use to connect the CPU
+entry paths, kernel objects, waits, APCs, and the structures listed below.
+
 - [exceptions-interrupts](exceptions-interrupts/) - CPU exceptions, the IDT/GDT,
   and Windows exception dispatch
 - [system-call-tables](system-call-tables/) - NT and Win32k service tables
