@@ -28,7 +28,6 @@ IRQL parts require a real kernel-debugging connection to a disposable VM.
 
 - `system_lab.c` is the workload.
 - `build-msvc.bat` makes an x64 debug build with a PDB.
-- `evidence/` contains the screenshot checklist.
 
 The program prints its process and thread IDs in decimal and hexadecimal. Its
 worker blocks on a manual-reset event until the last stage. The main thread
@@ -258,19 +257,6 @@ not demonstrate a DPC or ISR. Those require a driver/device-oriented lab.
 The ReactOS source is useful for reading an open implementation of executive
 ideas. It is not the source code for the Windows kernel, and its fields or
 implementation details are not proof of what the target Windows build does.
-
-## Evidence
-
-Use the naming checklist in [evidence/README.md](evidence/README.md). I left the
-gallery empty deliberately: proof images should come from the actual VM and
-must show its build, addresses, and debugger commands.
-
-Once the PNG files exist, add them here with normal relative Markdown links.
-For example:
-
-```markdown
-![Local NtCreateFile stub](evidence/01-ntcreatefile-stub.png)
-```
 
 ## References
 
